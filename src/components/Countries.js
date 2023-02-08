@@ -1,19 +1,25 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Card from './Card';
 
 function Countries({ countries }) {
-  return countries.length ? (
-    <div className='flex flex-wrap justify-between items-center mx-28'>
-      {countries.map((country, ind) => (
+  const getAllCountries = () => {
+    return countries.map((country, ind) => (
+      <Link key={ind} to={`/country/${country.name.official}`}>
         <Card
-          key={ind}
           flag={country.flags.svg}
           name={country.name.official}
           population={country.population}
           region={country.region}
           capital={country.capital}
         />
-      ))}
+      </Link>
+    ));
+  };
+
+  return countries.length ? (
+    <div className='flex flex-wrap items-center mx-28'>
+      {getAllCountries()}
     </div>
   ) : (
     ''

@@ -5,9 +5,10 @@ function Filter({ searchCountries, filterCountries }) {
   const [input, setInput] = useState('');
   const [region, setRegion] = useState('');
 
+  // FIXME: input is not updating properly
   const handleInputChange = (evt) => {
     setInput(evt.target.value);
-    searchCountries(input);
+    searchCountries(evt.target.value);
   };
 
   // FIXME: region is not updating properly
@@ -23,6 +24,7 @@ function Filter({ searchCountries, filterCountries }) {
         <input type='text' value={input} onChange={handleInputChange} placeholder='Search for a country...' />
       </form>
       <select value={region} onChange={handleFilterChange}>
+        {/* FIXME: Filter by region should not be a option */}
         <option>Filter By Region</option>
         <option>Asia</option>
         <option>Africa</option>

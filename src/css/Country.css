@@ -1,0 +1,13 @@
+.Country {
+  margin: 50px;
+  color: white;
+}
+
+.Country-Data {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Country img {
+  max-width: 700px;
+}

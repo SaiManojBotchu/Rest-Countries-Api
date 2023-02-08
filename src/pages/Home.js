@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import Header from './components/Header';
-import Filter from './components/Filter';
-import Countries from './components/Countries';
-import useFetchState from './hooks/useFetchState';
+import Filter from '../components/Filter';
+import Countries from '../components/Countries';
+import useFetchState from '../hooks/useFetchState';
 
 function Home() {
   const countries = useFetchState([]);
@@ -24,14 +23,22 @@ function Home() {
   };
 
   const filterCountries = (region) => {
-    const newCountries = countries.filter(country => country.region === region);
+    const newCountries = countries.filter(
+      (country) => country.region === region
+    );
     setCountriesCopy(newCountries);
   };
 
+  // const getCountryData = (name) => {
+  //   return countries.filter(country => country.name.official === name)[0];
+  // };
+
   return (
     <div className='text-white'>
-      <Header />
-      <Filter searchCountries={searchCountries} filterCountries={filterCountries} />
+      <Filter
+        searchCountries={searchCountries}
+        filterCountries={filterCountries}
+      />
       <Countries countries={countriesCopy} />
     </div>
   );

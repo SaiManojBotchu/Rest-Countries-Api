@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { v4 as uuid } from 'uuid';
 import Card from './Card';
 
 function Countries({ countries }) {
   const getAllCountries = () => {
-    return countries.map((country, ind) => (
-      <Link key={ind} to={`/country/${country.name.official}`}>
+    return countries.map((country) => (
+      <Link key={uuid()} to={`/country/${country.name.official}`}>
         <Card
           flag={country.flags.svg}
           name={country.name.official}

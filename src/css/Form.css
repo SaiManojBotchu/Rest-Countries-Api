@@ -1,9 +1,0 @@
-input[type=text], select {
-  /* width: 8%; */
-  display: inline-block;
-  /* border: 1px solid green; */
-  border-radius: 4px;
-  box-sizing: border-box;
-  background-color: #2B3945;
-  font-size: 26px;
-}

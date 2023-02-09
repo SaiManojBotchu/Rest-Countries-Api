@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Filter from '../components/Filter';
 import Countries from '../components/Countries';
 import useFetchState from '../hooks/useFetchState';
+import '../css/Home.css';
 
 function Home() {
   const countries = useFetchState([]);
@@ -34,7 +35,7 @@ function Home() {
   // };
 
   return (
-    <div className='text-white'>
+    <div className='Home'>
       <Filter
         searchCountries={searchCountries}
         filterCountries={filterCountries}

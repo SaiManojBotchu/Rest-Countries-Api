@@ -1,0 +1,22 @@
+.Header {
+  padding: 1.8rem 6rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: #2b3945;
+  box-shadow: 1px 10px 10px 5px rgb(29, 40, 50, 0.7);
+}
+
+.Header-title {
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+.toggle-btn {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.toggle-icon {
+  margin-right: 10px;
+}

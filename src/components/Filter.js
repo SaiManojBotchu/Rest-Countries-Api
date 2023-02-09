@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../css/Form.css';
+import '../css/Filter.css';
 
 function Filter({ searchCountries, filterCountries }) {
   const [input, setInput] = useState('');
@@ -18,21 +18,30 @@ function Filter({ searchCountries, filterCountries }) {
   };
 
   return (
-    <div>
-      <form className='Form rounded-md bg-[#2B3945] p-4'>
-        <i className='fa-solid fa-magnifying-glass p-4 text-[30px] font-extrabold' />
-        <input type='text' value={input} onChange={handleInputChange} placeholder='Search for a country...' />
-      </form>
-      <select value={region} onChange={handleFilterChange}>
-        {/* FIXME: Filter by region should not be a option */}
-        <option>Filter By Region</option>
-        <option>Asia</option>
-        <option>Africa</option>
-        <option>Europe</option>
-        <option>Americas</option>
-      </select>
+    <div className='Filter'>
+      <div className='Search'>
+        <label htmlFor='input'>
+          <i className='fa-solid fa-magnifying-glass' />
+        </label>
+        <input
+          id='input'
+          type='text'
+          value={input}
+          onChange={handleInputChange}
+          placeholder='Search for a country...'
+          autoComplete='off'
+        />
+      </div>
+      <div className='select'>
+        <select onChange={handleFilterChange} defaultValue="Filter By Region">
+          <option value="Filter By Region" disabled>Filter By Region</option>
+          <option>Asia</option>
+          <option>Africa</option>
+          <option>Europe</option>
+          <option>Americas</option>
+        </select>
+      </div>
     </div>
-
   );
 }
 

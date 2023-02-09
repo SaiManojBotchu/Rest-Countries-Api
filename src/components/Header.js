@@ -1,13 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import '../css/Header.css';
 
 function Header() {
   return (
-    <header className='text-white flex justify-between items-center bg-[#2B3945] h-[8rem] shadow-md px-24'>
-      <h3 className='text-[38px] font-black tracking-tight'>
-        Where in the world?
-      </h3>
-      <button className='text-[28px] font-semibold'>
-        <i className='fa-solid fa-moon p-2' />
+    <header className='Header'>
+      <Link to='/' className='Header-title'>Where in the world?</Link>
+      <button className='toggle-btn'>
+        <i className='fa-solid fa-moon toggle-icon' />
         Dark Mode
       </button>
     </header>

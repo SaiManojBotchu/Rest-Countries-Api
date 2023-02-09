@@ -1,3 +1,148 @@
 .Home {
-  padding: 0rem 6rem;
+  margin: 0rem 6rem;
 }
+
+/*****  Header CSS  *****/
+.Header {
+  padding: 1.8rem 6rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: #2b3945;
+  box-shadow: 1px 10px 10px 5px rgb(29, 40, 50, 0.7);
+}
+
+.Header-title {
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+.toggle-btn {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.toggle-icon {
+  margin-right: 10px;
+}
+/************************/
+
+/*****  Filter CSS  *****/
+.Filter {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 1.3rem;
+}
+
+.Search {
+  padding: 2rem;
+  border-radius: 0.6rem;
+  background-color: #2b3945;
+  box-shadow: 1px 10px 10px 5px rgb(29, 40, 50, 0.7),
+    -1px -10px 10px 5px rgb(29, 40, 50, 0.7);
+}
+
+input[type='text'] {
+  padding-left: 1rem;
+  width: 550px;
+  background-color: #2b3945;
+  appearance: none;
+  outline: none;
+}
+
+input::placeholder {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+}
+
+select {
+  /* A reset of styles, including removing the default dropdown arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: none;
+  padding: 2rem;
+  width: 250px;
+  background-color: #2b3945;
+  border-radius: 0.6rem;
+  cursor: pointer;
+}
+
+.select {
+  position: relative;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  background-color: #2b3945;
+  box-shadow: 1px 10px 10px 5px rgb(29, 40, 50, 0.7),
+    -1px -10px 10px 5px rgb(29, 40, 50, 0.7);
+}
+
+.select:after {
+  /* for using font awesome icon */
+  content: '\f0d7';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  right: 8%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+/************************/
+
+/*****  Countries, Card CSS  *****/
+.Countries {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.Card {
+  margin-top: 5rem;
+  width: 360px;
+  height: 460px;
+  font-size: 1.1rem;
+  background-color: #2b3945;
+  border-radius: 0.6rem;
+  overflow: hidden;
+  box-shadow: 0 0 4px 3px rgb(0 0 0 / 10%);
+  opacity: 0.9;
+  transition: 0.1s ease-in;
+  text-align: center;
+}
+
+.Card:hover {
+  scale: 1.05;
+  opacity: 1;
+}
+
+.Card-img-container {
+  height: 14rem;
+}
+
+.Card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Card-text {
+  padding: 2rem 1.3rem 3rem;
+}
+
+.Card-text h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 900;
+}
+
+.Card-text p strong {
+  font-weight: 600;
+}
+/************************/
+
+

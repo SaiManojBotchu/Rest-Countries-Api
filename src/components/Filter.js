@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../css/Filter.css';
+import '../css/Home.css';
 
 function Filter({ searchCountries, filterCountries }) {
   const [input, setInput] = useState('');

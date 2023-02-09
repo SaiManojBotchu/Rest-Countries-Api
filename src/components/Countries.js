@@ -2,7 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { v4 as uuid } from 'uuid';
 import Card from './Card';
+import '../css/Home.css';
 
+// FIXME: when there are countries less than 4, "justify-between" is not helping
+// as that is causing more space between the country cards
 function Countries({ countries }) {
   const getAllCountries = () => {
     return countries.map((country) => (
@@ -19,7 +22,7 @@ function Countries({ countries }) {
   };
 
   return countries.length ? (
-    <div className='flex flex-wrap items-center mx-28'>
+    <div className='Countries'>
       {getAllCountries()}
     </div>
   ) : (

@@ -1,14 +1,27 @@
 import React from 'react';
-import '../css/Card.css';
+import '../css/Home.css';
 
 function Card({ flag, name, population, region, capital }) {
   return (
     <div className='Card'>
-      <img src={flag} alt="reload" />
-      <p>{name}</p>
-      <p>Population: {population}</p>
-      <p>Region: {region}</p>
-      <p>Capital: {capital}</p>
+      <div className='Card-img-container'>
+        <img src={flag} alt='reload' />
+      </div>
+      <div className='Card-text'>
+        <h2>{name}</h2>
+        <p>
+          <strong>Population: </strong>
+          {population}
+        </p>
+        <p>
+          <strong>Region: </strong>
+          {region}
+        </p>
+        <p>
+          <strong>Capital: </strong>
+          {capital}
+        </p>
+      </div>
     </div>
   );
 }

@@ -1,12 +1,78 @@
-.Country {
-  margin: 50px;
+/*****  Country CSS  *****/
+
+.Container {
+  margin: 0rem 6rem;
 }
 
-.Country-Data {
+.Back-btn {
+  margin: 3rem 0;
+  padding: 1.5rem 5rem;
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 900;
+  border-radius: 0.6rem;
+  background-color: #2b3945;
+  box-shadow: 1px 10px 10px 5px rgb(29, 40, 50, 0.7),
+    -1px -10px 10px 5px rgb(29, 40, 50, 0.7);
+}
+
+.Back-btn i {
+  margin-right: 1rem;
+}
+
+.Country {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.Img-container {
+  width: 40rem;
+  height: 30rem;
+  margin-right: 6rem;
+}
+
+.Country img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Text-container {
+  flex: 1;
+}
+
+.Text-container h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 1rem 0;
+}
+
+.Text-container p {
+  font-size: 1.3rem;
+  color: rgb(236, 231, 231);
+  padding-bottom: 1.2rem;
+}
+
+.Text-container strong {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: white;
+}
+
+.Country-text {
   display: flex;
   flex-wrap: wrap;
 }
 
-.Country img {
-  max-width: 700px;
+.left-text {
+  flex: 1;
 }
+
+.right-text {
+  flex: 1;
+}
+
+
+
+/************************/

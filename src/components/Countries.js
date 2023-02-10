@@ -9,10 +9,10 @@ import '../css/Home.css';
 function Countries({ countries }) {
   const getAllCountries = () => {
     return countries.map((country) => (
-      <Link key={uuid()} to={`/country/${country.name.official}`}>
+      <Link key={uuid()} to={`/country/${country.name.common}`}>
         <Card
           flag={country.flags.svg}
-          name={country.name.official}
+          name={country.name.common}
           population={country.population}
           region={country.region}
           capital={country.capital}
@@ -31,3 +31,8 @@ function Countries({ countries }) {
 }
 
 export default Countries;
+
+
+
+
+

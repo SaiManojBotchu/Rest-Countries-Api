@@ -1,4 +1,5 @@
 import React from 'react';
+import format from '../utils/formatPopulation';
 import '../css/Home.css';
 
 function Card({ flag, name, population, region, capital }) {
@@ -11,7 +12,7 @@ function Card({ flag, name, population, region, capital }) {
         <h2>{name}</h2>
         <p>
           <strong>Population: </strong>
-          {population}
+          {format(population)}
         </p>
         <p>
           <strong>Region: </strong>

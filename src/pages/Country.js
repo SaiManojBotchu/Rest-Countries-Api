@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import useCountryState from '../hooks/useCountryState';
+import format from '../utils/formatPopulation';
 import '../css/Country.css';
 
 function Country() {
@@ -35,7 +36,7 @@ function Country() {
               </p>
               <p>
                 <strong>Population: </strong>
-                {country.population}
+                {format(country.population)}
               </p>
               <p>
                 <strong>Region: </strong>

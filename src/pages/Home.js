@@ -21,6 +21,7 @@ function Home() {
       }
       return null;
     });
+    // newCountries = newCountries.filter((country) => region === country.region);
     setCountriesCopy(newCountries);
   };
 

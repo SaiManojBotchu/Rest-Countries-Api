@@ -22,7 +22,7 @@ function Country() {
       </div>
       <div className='Country'>
         <div className='Img-container'>
-          <img src={country.flags.svg} alt='reload' />
+          <img src={country.flags.svg} alt='Image not available' />
         </div>
         <div className='Text-container'>
           <div>
@@ -32,37 +32,45 @@ function Country() {
             <div className='left-text'>
               <p>
                 <strong>Native Name: </strong>
-                {Object.values(country.name.nativeName)[0].common}
+                {country.name.nativeName
+                  ? Object.values(country.name.nativeName)[0].common
+                  : 'No NativeName'}
               </p>
               <p>
                 <strong>Population: </strong>
-                {format(country.population)}
+                {country.population
+                  ? format(country.population)
+                  : 'No Population'}
               </p>
               <p>
                 <strong>Region: </strong>
-                {country.region}
+                {country.region || 'No Region'}
               </p>
               <p>
                 <strong>Subregion: </strong>
-                {country.subregion}
+                {country.subregion || 'No SubRegion'}
               </p>
               <p>
                 <strong>Capital: </strong>
-                {country.capital}
+                {country.capital || 'No Capital'}
               </p>
             </div>
             <div className='right-text'>
               <p>
                 <strong>Top Level Domain: </strong>
-                {country.tld[0]}
+                {country.tld ? country.tld[0] : 'No Domain'}
               </p>
               <p>
                 <strong>Currencies: </strong>
-                {Object.values(country.currencies)[0].name}
+                {country.currencies
+                  ? Object.values(country.currencies)[0].name
+                  : 'No Currency'}
               </p>
               <p>
                 <strong>Languages: </strong>
-                {Object.values(country.languages)[0]}
+                {country.languages
+                  ? Object.values(country.languages)[0]
+                  : 'No Language'}
               </p>
             </div>
           </div>

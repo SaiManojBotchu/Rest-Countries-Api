@@ -6,17 +6,17 @@ function Card({ flag, name, population, region, capital }) {
   return (
     <div className='Card'>
       <div className='Card-img-container'>
-        <img src={flag} alt='reload' />
+        <img src={flag} alt='Image not available' />
       </div>
       <div className='Card-text'>
-        <h2>{name}</h2>
+        <h2>{name || 'No Name'}</h2>
         <p>
           <strong>Population: </strong>
-          {format(population)}
+          {population ? format(population) : 'No Population'}
         </p>
         <p>
           <strong>Region: </strong>
-          {region}
+          {region || 'No Region'}
         </p>
         <p>
           <strong>Capital: </strong>

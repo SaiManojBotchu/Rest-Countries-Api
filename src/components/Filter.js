@@ -1,20 +1,22 @@
 import React, { useState } from 'react';
 import '../css/Home.css';
 
-function Filter({ searchCountries, filterCountries }) {
+function Filter({ searchFilterCountries }) {
   const [input, setInput] = useState('');
   const [region, setRegion] = useState('');
 
   // FIXME: input is not updating properly
   const handleInputChange = (evt) => {
     setInput(evt.target.value);
-    searchCountries(evt.target.value, region);
+    searchFilterCountries(evt.target.value, region);
+    // searchFilterCountries(input, region);
   };
 
   // FIXME: region is not updating properly
   const handleFilterChange = (evt) => {
     setRegion(evt.target.value);
-    filterCountries(evt.target.value);
+    searchFilterCountries(input, evt.target.value);
+    // searchFilterCountries(input, region);
   };
 
   return (

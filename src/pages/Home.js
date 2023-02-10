@@ -12,36 +12,28 @@ function Home() {
     setCountriesCopy(countries);
   }, [countries]);
 
-  const searchCountries = (input, region) => {
-    console.log(region);
-    const newCountries = countries.filter((country) => {
-      const name = country.name.official.toLowerCase();
-      if (name.includes(input.toLowerCase())) {
-        return country;
-      }
-      return null;
-    });
-    // newCountries = newCountries.filter((country) => region === country.region);
+  const searchFilterCountries = (input, region) => {
+    let newCountries = countries;
+    if (input) {
+      newCountries = countries.filter((country) => {
+        const name = country.name.common.toLowerCase();
+        if (name.includes(input.toLowerCase())) {
+          return country;
+        }
+        return null;
+      });
+    }
+    if (region) {
+      newCountries = newCountries.filter(
+        (country) => region === country.region
+      );
+    }
     setCountriesCopy(newCountries);
   };
-
-  const filterCountries = (region) => {
-    const newCountries = countries.filter(
-      (country) => country.region === region
-    );
-    setCountriesCopy(newCountries);
-  };
-
-  // const getCountryData = (name) => {
-  //   return countries.filter(country => country.name.official === name)[0];
-  // };
 
   return (
     <div className='Home'>
-      <Filter
-        searchCountries={searchCountries}
-        filterCountries={filterCountries}
-      />
+      <Filter searchFilterCountries={searchFilterCountries} />
       <Countries countries={countriesCopy} />
     </div>
   );

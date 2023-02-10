@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import sortJson from '../utils/sortJson';
 
 function useFetchState(intialValue) {
   const [state, setState] = useState(intialValue);
@@ -8,7 +9,8 @@ function useFetchState(intialValue) {
     try {
       const response = await fetch(url);
       const json = await response.json();
-      setState(json);
+      // sorting the json data
+      setState(sortJson(json));
     } catch (err) {
       console.error(err);
     }

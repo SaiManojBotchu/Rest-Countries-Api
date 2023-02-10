@@ -12,7 +12,8 @@ function Home() {
     setCountriesCopy(countries);
   }, [countries]);
 
-  const searchCountries = (input) => {
+  const searchCountries = (input, region) => {
+    console.log(region);
     const newCountries = countries.filter((country) => {
       const name = country.name.official.toLowerCase();
       if (name.includes(input.toLowerCase())) {

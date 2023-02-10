@@ -20,7 +20,7 @@ function Card({ flag, name, population, region, capital }) {
         </p>
         <p>
           <strong>Capital: </strong>
-          {capital}
+          {capital || 'No Capital'}
         </p>
       </div>
     </div>

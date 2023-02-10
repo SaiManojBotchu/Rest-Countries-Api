@@ -8,7 +8,7 @@ function Filter({ searchCountries, filterCountries }) {
   // FIXME: input is not updating properly
   const handleInputChange = (evt) => {
     setInput(evt.target.value);
-    searchCountries(evt.target.value);
+    searchCountries(evt.target.value, region);
   };
 
   // FIXME: region is not updating properly
@@ -35,10 +35,12 @@ function Filter({ searchCountries, filterCountries }) {
       <div className='select'>
         <select onChange={handleFilterChange} defaultValue="Filter By Region">
           <option value="Filter By Region" disabled>Filter By Region</option>
-          <option>Asia</option>
           <option>Africa</option>
-          <option>Europe</option>
           <option>Americas</option>
+          <option>Antarctic</option>
+          <option>Asia</option>
+          <option>Europe</option>
+          <option>Oceania</option>
         </select>
       </div>
     </div>

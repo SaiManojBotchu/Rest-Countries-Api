@@ -23,7 +23,7 @@
 
 .Country {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   margin-top: 2rem;
 }
 
@@ -46,7 +46,7 @@
 .Text-container h1 {
   font-size: 3rem;
   font-weight: 900;
-  margin: 1rem 0;
+  margin: .5rem 0;
 }
 
 .Text-container p {
@@ -74,6 +74,14 @@
   flex: 1;
 }
 
+.Border-btn {
+  padding: .5rem 1rem;
+  margin-right: .5rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  font-size: 1.1rem;
+  background-color: #2b3945;
+}
 
 
 /************************/

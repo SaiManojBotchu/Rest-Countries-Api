@@ -16,7 +16,7 @@ function useFetchState(name) {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [name]);
 
   return state;
 }

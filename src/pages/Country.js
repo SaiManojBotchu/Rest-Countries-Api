@@ -1,13 +1,29 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { v4 as uuid } from 'uuid';
 import useCountryState from '../hooks/useCountryState';
 import format from '../utils/formatPopulation';
+import useFetchState from '../hooks/useFetchState';
 import '../css/Country.css';
 
 function Country() {
   const { name } = useParams();
+  const countries = useFetchState([]);
+
   const countryData = useCountryState(name);
   const country = countryData[0];
+
+  const getBorderCountries = (borders) => {
+    const newCountries = countries
+      .filter((c) => borders.includes(c.cca3))
+      .map((c) => c.name.common);
+    const newBorders = newCountries.map((c) => (
+      <Link key={uuid()} to={`/country/${c}`} className='Border-btn'>
+        {c}
+      </Link>
+    ));
+    return newBorders;
+  };
 
   return countryData.length === 0 ? (
     <h1>Getting data</h1>
@@ -76,7 +92,9 @@ function Country() {
           </div>
           <p>
             <strong>Border countries: </strong>
-            {country.borders ? country.borders : 'No Borders'}
+            {country.borders
+              ? getBorderCountries(country.borders)
+              : 'No Borders'}
           </p>
         </div>
       </div>

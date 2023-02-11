@@ -1,23 +1,13 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../css/Home.css';
 
 function Filter({ searchFilterCountries }) {
   const [input, setInput] = useState('');
   const [region, setRegion] = useState('');
 
-  // FIXME: input is not updating properly
-  const handleInputChange = (evt) => {
-    setInput(evt.target.value);
-    searchFilterCountries(evt.target.value, region);
-    // searchFilterCountries(input, region);
-  };
-
-  // FIXME: region is not updating properly
-  const handleFilterChange = (evt) => {
-    setRegion(evt.target.value);
-    searchFilterCountries(input, evt.target.value);
-    // searchFilterCountries(input, region);
-  };
+  useEffect(() => {
+    searchFilterCountries(input, region);
+  }, [input, region]);
 
   return (
     <div className='Filter'>
@@ -29,13 +19,13 @@ function Filter({ searchFilterCountries }) {
           id='input'
           type='text'
           value={input}
-          onChange={handleInputChange}
+          onChange={e => setInput(e.target.value)}
           placeholder='Search for a country...'
           autoComplete='off'
         />
       </div>
       <div className='select'>
-        <select onChange={handleFilterChange} defaultValue="Filter By Region">
+        <select onChange={e => setRegion(e.target.value)} defaultValue="Filter By Region">
           <option value="Filter By Region" disabled>Filter By Region</option>
           <option>Africa</option>
           <option>Americas</option>

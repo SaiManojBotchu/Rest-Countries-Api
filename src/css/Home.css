@@ -7,24 +7,21 @@
   padding: 1.8rem 6rem;
   display: flex;
   justify-content: space-between;
-  background-color: #2b3945;
-  box-shadow: 1px 10px 10px 5px rgb(29, 40, 50, 0.7);
-}
-
-.Header-title {
   font-size: 1.8rem;
   font-weight: 900;
+  background-color: var(--headerBColor);
+  box-shadow: var(--boxShadow);
 }
 
-.toggle-btn {
+.Header button {
   font-size: 1.5rem;
   font-weight: 600;
-  margin-left: 10px;
 }
 
-.toggle-icon {
-  margin-right: 10px;
+.Header i {
+  margin-right: 0.6rem;
 }
+
 /************************/
 
 /*****  Filter CSS  *****/
@@ -39,15 +36,14 @@
 .Search {
   padding: 2rem;
   border-radius: 0.6rem;
-  background-color: #2b3945;
-  box-shadow: 1px 10px 10px 5px rgb(29, 40, 50, 0.7),
-    -1px -10px 10px 5px rgb(29, 40, 50, 0.7);
+  background-color: var(--headerBColor);
+  box-shadow: var(--boxShadow);
 }
 
 input[type='text'] {
   padding-left: 1rem;
   width: 550px;
-  background-color: #2b3945;
+  background-color: var(--headerBColor);
   appearance: none;
   outline: none;
 }
@@ -66,7 +62,7 @@ select {
   outline: none;
   padding: 2rem;
   width: 250px;
-  background-color: #2b3945;
+  background-color: var(--headerBColor);
   border-radius: 0.6rem;
   cursor: pointer;
 }
@@ -75,9 +71,8 @@ select {
   position: relative;
   border-radius: 0.6rem;
   cursor: pointer;
-  background-color: #2b3945;
-  box-shadow: 1px 10px 10px 5px rgb(29, 40, 50, 0.7),
-    -1px -10px 10px 5px rgb(29, 40, 50, 0.7);
+  background-color: var(--headerBColor);
+  box-shadow: var(--boxShadow);
 }
 
 .select:after {
@@ -96,20 +91,21 @@ select {
 
 /*****  Countries, Card CSS  *****/
 .Countries {
+  padding-top: 6rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .Card {
-  margin-top: 5rem;
+  margin-bottom: 5rem;
   width: 360px;
   height: 460px;
   font-size: 1.1rem;
-  background-color: #2b3945;
+  background-color: var(--headerBColor);
   border-radius: 0.6rem;
   overflow: hidden;
-  box-shadow: 0 0 4px 3px rgb(0 0 0 / 10%);
+  box-shadow: var(--boxShadow);
   opacity: 0.9;
   transition: 0.1s ease-in;
   text-align: center;
@@ -144,5 +140,3 @@ select {
   font-weight: 600;
 }
 /************************/
-
-

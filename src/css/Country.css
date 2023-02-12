@@ -12,9 +12,8 @@
   font-weight: 900;
   border-radius: 0.6rem;
   cursor: pointer;
-  background-color: #2b3945;
-  box-shadow: 1px 10px 10px 5px rgb(29, 40, 50, 0.7),
-    -1px -10px 10px 5px rgb(29, 40, 50, 0.7);
+  background-color: var(--headerBColor);
+  box-shadow: var(--boxShadow);
 }
 
 .Back-btn i {
@@ -31,6 +30,7 @@
   width: 40rem;
   height: 30rem;
   margin-right: 6rem;
+  box-shadow: var(--boxShadow);
 }
 
 .Country img {
@@ -46,19 +46,18 @@
 .Text-container h1 {
   font-size: 3rem;
   font-weight: 900;
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 
 .Text-container p {
   font-size: 1.3rem;
-  color: rgb(236, 231, 231);
   padding-bottom: 1.2rem;
+  font-weight: 100;
 }
 
 .Text-container strong {
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: white;
+  font-size: 1.4rem;
+  font-weight: 600;
 }
 
 .Country-text {
@@ -75,13 +74,13 @@
 }
 
 .Border-btn {
-  padding: .5rem 1rem;
-  margin-right: .5rem;
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
   margin-bottom: 1rem;
   display: inline-block;
   font-size: 1.1rem;
-  background-color: #2b3945;
+  background-color: var(--headerBColor);
+  box-shadow: var(--boxShadow);
 }
-
 
 /************************/

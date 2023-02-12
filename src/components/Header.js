@@ -2,13 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../css/Home.css';
 
-function Header() {
+function Header({ dark, toggleTheme }) {
   return (
     <header className='Header'>
-      <Link to='/' className='Header-title'>Where in the world?</Link>
-      <button className='toggle-btn'>
-        <i className='fa-solid fa-moon toggle-icon' />
-        Dark Mode
+      <Link to='/'>Where in the world?</Link>
+      <button onClick={toggleTheme}>
+        <i className={`fa-solid fa-${dark ? 'sun' : 'moon'}`} />
+        {dark ? 'Light Mode' : 'Dark Mode'}
       </button>
     </header>
   );

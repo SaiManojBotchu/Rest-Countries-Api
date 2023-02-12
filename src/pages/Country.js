@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { v4 as uuid } from 'uuid';
-import useCountryState from '../hooks/useCountryState';
 import format from '../utils/formatPopulation';
 import useFetchState from '../hooks/useFetchState';
 import '../css/Country.css';
@@ -10,8 +9,13 @@ function Country() {
   const { name } = useParams();
   const countries = useFetchState([]);
 
-  const countryData = useCountryState(name);
-  const country = countryData[0];
+  const [countryData, setCountryData] = useState([]);
+  const [country] = countryData;
+
+  useEffect(() => {
+    const data = countries.filter((c) => c.name.common === name);
+    setCountryData(data);
+  }, [name, countries]);
 
   const getBorderCountries = (borders) => {
     const newCountries = countries

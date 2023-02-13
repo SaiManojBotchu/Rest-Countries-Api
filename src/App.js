@@ -17,14 +17,14 @@ function App() {
   };
 
   return (
-    <div>
+    <>
       <Header dark={isDarkMode} toggleTheme={toggleTheme} />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/country/:name' element={<Country />} />
         <Route path='*' element={<NoPage />} />
       </Routes>
-    </div>
+    </>
   );
 }
 

@@ -4,8 +4,6 @@ import { v4 as uuid } from 'uuid';
 import Card from './Card';
 import '../css/Home.css';
 
-// FIXME: when there are countries less than 4, "justify-between" is not helping
-// as that is causing more space between the country cards
 function Countries({ countries }) {
   const getAllCountries = () => {
     return countries.map((country) => (

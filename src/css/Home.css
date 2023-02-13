@@ -1,16 +1,22 @@
 .Home {
-  margin: 0rem 6rem;
+  margin: 0 auto;
+  max-width: 110rem;
 }
 
 /*****  Header CSS  *****/
 .Header {
   padding: 1.8rem 6rem;
+  background-color: var(--headerBColor);
+  box-shadow: var(--boxShadow);
+}
+
+.Header header{
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   font-size: 1.8rem;
   font-weight: 900;
-  background-color: var(--headerBColor);
-  box-shadow: var(--boxShadow);
+  max-width: 110rem;
 }
 
 .Header button {
@@ -94,13 +100,17 @@ select {
   padding-top: 6rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  /* space between each card */
+  gap: 6rem;
+}
+
+.Countries:last-child {
+  margin-bottom: 6rem;
 }
 
 .Card {
-  margin-bottom: 5rem;
-  width: 360px;
-  height: 460px;
+  width: 23rem;
+  height: 28rem;
   font-size: 1.1rem;
   background-color: var(--headerBColor);
   border-radius: 0.6rem;

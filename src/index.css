@@ -5,6 +5,8 @@
   --bColor: #1f2c37;
   --textColor: white;
   --boxShadow: 0 0 4px 3px rgb(0 0 0 / 10%);
+  --paddingX: 0;
+  --paddingBox: 1.5rem 2rem;
 }
 
 * {
@@ -18,11 +20,24 @@ Body {
   font-family: 'Nunito Sans', sans-serif;
   background-color: var(--bColor);
   color: var(--textColor);
-  transition: 0.3s;
+  transition: color 0.3s ease-in-out, background-color 0.2s;
 }
 
 .light-theme {
   --headerBColor: white;
   --bColor: white;
   --textColor: black;
+}
+
+/* Media queries */
+@media screen and (max-width: 1919px) {
+  :root {
+    --paddingX: 2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  :root {
+    --paddingX: 1.5rem;
+  }
 }

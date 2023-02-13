@@ -34,12 +34,10 @@ function Country() {
   ) : (
     <div className='Container'>
       {/* FIXME: when going back the state is changing */}
-      <div className='Back-btn'>
-        <Link to='/'>
-          <i className='fa-sharp fa-solid fa-arrow-left' />
-          Back
-        </Link>
-      </div>
+      <Link to='/' className='Back-btn'>
+        <i className='fa-sharp fa-solid fa-arrow-left' />
+        Back
+      </Link>
       <div className='Country'>
         <div className='Img-container'>
           <img src={country.flags.svg} alt='Image not available' />

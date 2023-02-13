@@ -1,6 +1,7 @@
 .Home {
   margin: 0 auto;
   max-width: 110rem;
+  padding: 0 var(--paddingX);
 }
 
 /*****  Header CSS  *****/
@@ -14,7 +15,7 @@ header {
 }
 
 .Header {
-  padding: 1.8rem;
+  padding: 1.8rem var(--paddingX);
   margin: 0 auto;
   width: 100%;
   font-size: 1.8rem;
@@ -41,14 +42,23 @@ header {
 .Filter {
   /* Since Header is fixed posititon(added extra 5.5rem to the margin */
   margin-top: 8rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
+  gap: var(--paddingX);
   justify-content: space-between;
   font-size: 1.3rem;
 }
 
 .Search {
-  padding: 2rem;
+  padding: var(--paddingBox);
+  width: 35rem;
+  /* if width is less than 560rem then take total width(100) */
+  width: min(35rem, 100%);
+  display: flex;
+  align-items: center;
   border-radius: 0.6rem;
   background-color: var(--headerBColor);
   box-shadow: var(--boxShadow);
@@ -56,7 +66,7 @@ header {
 
 input[type='text'] {
   padding-left: 1rem;
-  width: 550px;
+  width: 100%;
   background-color: var(--headerBColor);
   appearance: none;
   outline: none;
@@ -74,22 +84,26 @@ select {
   -ms-appearance: none;
   appearance: none;
   outline: none;
-  padding: 2rem;
-  width: 250px;
+  padding: var(--paddingBox);
   background-color: var(--headerBColor);
   border-radius: 0.6rem;
   cursor: pointer;
+  width: 100%;
 }
 
-.select {
+.Select {
   position: relative;
+  width: min(15rem, 100%);
   border-radius: 0.6rem;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--headerBColor);
   box-shadow: var(--boxShadow);
 }
 
-.select:after {
+.Select:after {
   /* for using font awesome icon */
   content: '\f0d7';
   font-family: 'Font Awesome 6 Free';
@@ -101,6 +115,7 @@ select {
   transform: translateY(-50%);
   pointer-events: none;
 }
+
 /************************/
 
 /*****  Countries, Card CSS  *****/
@@ -108,6 +123,7 @@ select {
   padding-top: 6rem;
   display: flex;
   flex-wrap: wrap;
+  overflow: hidden;
   /* space between each card */
   gap: 6rem;
 }
@@ -118,7 +134,6 @@ select {
 
 .Card {
   width: 23rem;
-  height: 28rem;
   font-size: 1.1rem;
   background-color: var(--headerBColor);
   border-radius: 0.6rem;
@@ -154,7 +169,112 @@ select {
   font-weight: 900;
 }
 
+.Card-text p {
+  font-weight: 100;
+}
+
 .Card-text p strong {
   font-weight: 600;
 }
 /************************/
+
+/*****  Media queries  *****/
+
+/* If (700 < width <= 1919px) change "Countries" */
+@media only screen and (max-width: 1919px) {
+  /*** Countries ***/
+  .Countries {
+    padding-top: 3rem;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .Card {
+    width: 20rem;
+    font-size: 1rem;
+  }
+  .Card-img-container {
+    height: 13rem;
+  }
+  .Card-text {
+    padding: 1rem 1.3rem 2rem;
+  }
+  .Card-text h2 {
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  /*** Countries ***/
+  .Countries {
+    padding-top: 2rem;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .Card {
+    width: 18rem;
+    font-size: 1rem;
+  }
+  .Card-img-container {
+    height: 11rem;
+  }
+  .Card-text {
+    padding: 1rem 1.3rem 2rem;
+  }
+  .Card-text h2 {
+    font-size: 1.1rem;
+  }
+}
+
+/* If (width <= 1000px) change "Header" & "Filter" */
+@media only screen and (max-width: 1000px) {
+  /*** Header ***/
+  .Header {
+    font-size: 1.4rem;
+    padding: 1.4rem var(--paddingX);
+  }
+  .toggle-btn {
+    font-size: 1.2rem;
+  }
+  /*** Filter ***/
+  .Filter {
+    margin-top: 7rem;
+    font-size: 1.1rem;
+  }
+  .Search {
+    width: 55%;
+  }
+  .Select {
+    width: 35%;
+  }
+}
+
+/* If (width <= 700px) change "Header", "Filter" & "Countries" */
+@media only screen and (max-width: 700px) {
+  /*** Header ***/
+  .toggle-btn p {
+    display: none;
+  }
+  /*** Filter ***/
+  .Filter {
+    margin-top: 6rem;
+    font-size: 1rem;
+    flex-direction: column;
+  }
+  .Search,
+  .Select,
+  select {
+    width: 100%;
+  }
+  /*** Countries ***/
+  .Countries {
+    padding-top: 2rem;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .Card {
+    transform: scale(0.9);
+  }
+}

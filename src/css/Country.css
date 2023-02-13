@@ -1,14 +1,19 @@
 /*****  Country CSS  *****/
 
 .Container {
-  margin: 0rem 6rem;
+  margin: 0rem auto;
+  max-width: 110rem;
+  padding: 0 var(--paddingX);
   /* Since Header is fixed posititon */
   margin-top: 5.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .Back-btn {
   margin: 3rem 0;
-  padding: 1.5rem 5rem;
+  padding: var(--paddingBox);
   display: inline-block;
   font-size: 1.5rem;
   font-weight: 900;
@@ -29,8 +34,8 @@
 }
 
 .Img-container {
-  width: 40rem;
-  height: 30rem;
+  width: min(40rem, 100%);
+  height: auto;
   margin-right: 6rem;
   box-shadow: var(--boxShadow);
 }
@@ -86,3 +91,60 @@
 }
 
 /************************/
+
+/*****  Media queries  *****/
+
+@media only screen and (max-width: 1000px) {
+  .Back-btn {
+    margin: 1rem 0;
+    padding: 0.5rem 1.2rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .Img-container {
+    width: min(32rem, 100%);
+    height: 25rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .Back-btn {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1.2rem;
+    font-size: 1.2rem;
+  }
+  .Country {
+    flex-direction: column;
+  }
+  .Img-container {
+    width: min(30rem, 100%);
+    height: auto;
+  }
+  .Text-container h1 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-top: 2rem;
+  }
+  .Text-container p {
+    font-size: 0.9rem;
+    padding-bottom: 1.2rem;
+  }
+  .Text-container strong {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .Border-btn {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .Country-text {
+    flex-direction: column;
+  }
+}

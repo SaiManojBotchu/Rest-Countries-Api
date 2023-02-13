@@ -24,7 +24,7 @@ function Filter({ searchFilterCountries }) {
           autoComplete='off'
         />
       </div>
-      <div className='select'>
+      <div className='Select'>
         <select onChange={e => setRegion(e.target.value)} defaultValue="Filter By Region">
           <option value="Filter By Region" disabled>Filter By Region</option>
           <option>Africa</option>

@@ -2,6 +2,8 @@
 
 .Container {
   margin: 0rem 6rem;
+  /* Since Header is fixed posititon */
+  margin-top: 5.5rem;
 }
 
 .Back-btn {

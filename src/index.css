@@ -18,7 +18,7 @@ Body {
   font-family: 'Nunito Sans', sans-serif;
   background-color: var(--bColor);
   color: var(--textColor);
-  transition: color 0.3s ease-in-out;
+  transition: 0.3s;
 }
 
 .light-theme {

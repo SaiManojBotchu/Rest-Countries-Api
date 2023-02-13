@@ -4,35 +4,43 @@
 }
 
 /*****  Header CSS  *****/
-.Header {
-  padding: 1.8rem 6rem;
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
   background-color: var(--headerBColor);
   box-shadow: var(--boxShadow);
+  z-index: 2;
 }
 
-.Header header{
+.Header {
+  padding: 1.8rem;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
+  width: 100%;
   font-size: 1.8rem;
   font-weight: 900;
   max-width: 110rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.Header button {
+.toggle-btn {
   font-size: 1.5rem;
   font-weight: 600;
-}
-
-.Header i {
-  margin-right: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
 }
 
 /************************/
 
 /*****  Filter CSS  *****/
 .Filter {
-  margin-top: 2.5rem;
+  /* Since Header is fixed posititon(added extra 5.5rem to the margin */
+  margin-top: 8rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

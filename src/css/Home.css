@@ -84,7 +84,6 @@ select {
   -ms-appearance: none;
   appearance: none;
   outline: none;
-  padding: 1.5rem 2rem;
   background-color: var(--headerBColor);
   border-radius: 0.6rem;
   cursor: pointer;
@@ -92,10 +91,10 @@ select {
 }
 
 .Select {
+  padding: 1.5rem 1rem;
   position: relative;
   width: min(15rem, 100%);
   border-radius: 0.6rem;
-  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -186,7 +185,6 @@ select {
   .Countries {
     padding-top: 3rem;
     gap: 4rem;
-    color: green;
     justify-content: center;
     align-items: center;
   }

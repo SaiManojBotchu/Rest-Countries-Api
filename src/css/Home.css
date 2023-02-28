@@ -191,7 +191,6 @@ select {
   .Card {
     width: 20rem;
     font-size: 1rem;
-    background-color: green;
   }
   .Card-img-container {
     height: 13rem;
@@ -209,7 +208,6 @@ select {
   .Card {
     width: 18rem;
     font-size: 1rem;
-    background-color: red;
   }
   .Card-img-container {
     height: 10rem;
@@ -221,7 +219,6 @@ select {
   .Card {
     width: 16rem;
     font-size: 1rem;
-    background-color: violet;
   }
   .Card-img-container {
     height: 9rem;
@@ -233,7 +230,6 @@ select {
   .Card {
     width: 14rem;
     font-size: 0.8rem;
-    background-color: palegreen;
   }
   .Card-img-container {
     height: 8rem;
